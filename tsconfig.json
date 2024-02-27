@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "app/*": ["./app/*"],
+      "ui/*": ["./ui/*"]
+    }
+  },
+  "extends": "tsconfig.base",
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/types",
+    "platforms/next/out",
+    "platforms/next/.next",
+    "platforms/next/.tamagui"
+  ]
+}
