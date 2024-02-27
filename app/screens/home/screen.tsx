@@ -40,7 +40,7 @@ export function HomeScreen() {
           ,{' '}
           <Anchor
             color="$color12"
-            href="https://github.com/tamagui/tamagui"
+            href="https://github.com/Phani2525/TamaGUI-Skeleton"
             target="_blank"
             rel="noreferrer"
           >
