@@ -1,3 +1,7 @@
+# TamaGUI-Skeleton
+
+![Project Logo](./assets/skeleton.png)
+
 # Tamagui + Solito + Next + Expo Monorepo
 
 ```sh
