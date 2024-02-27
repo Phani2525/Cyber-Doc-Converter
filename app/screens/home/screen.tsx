@@ -30,8 +30,12 @@ export function HomeScreen() {
         <Separator />
         <Paragraph ta="center">
           Made by{' '}
-          <Anchor color="$color12" href="https://twitter.com/natebirdman" target="_blank">
-            @natebirdman
+          <Anchor
+            color="$color12"
+            href="https://www.linkedin.com/in/phani-bhushan-131b1327a/"
+            target="_blank"
+          >
+            @phani-bhushan
           </Anchor>
           ,{' '}
           <Anchor
