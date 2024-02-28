@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { YStack, Button, Text } from 'ui'
 import FileUploader from 'app/components/FileUploader'
+import { ImageBackground } from 'react-native'
 
 export const HomeScreen = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
@@ -56,18 +57,45 @@ export const HomeScreen = () => {
   }
 
   return (
-    <YStack>
-      <Text fontSize="$10">Document Converter</Text>
-      <FileUploader onFileUpload={handleFileUpload} />
-      <select value={outputFormat} onChange={(e) => setOutputFormat(e.target.value)}>
-        <option value="pdf">PDF</option>
-        <option value="docx">Word</option>
-        {/* Add more options for supported formats */}
-      </select>
-      <Button disabled={!selectedFile} onPress={handleConvert}>
-        Convert
-      </Button>
-      {convertedFileUrl && <Button onPress={handleDownload}>Download Converted File</Button>}
+    // <ImageBackground source="/homebackground.png" style={{ flex: 1 }}>
+    <YStack space="$4">
+      <YStack marginTop="$8" ai="center" space="$2">
+        <Text fontStyle="italic" fontWeight="700" fontSize="$10">
+          Welcome To Document Converter
+        </Text>
+      </YStack>
+      <YStack marginTop="$10" ai="center" space="$4">
+        <FileUploader onFileUpload={handleFileUpload} />
+      </YStack>
+      <YStack marginTop="$6" ai="center" space="$2">
+        <select
+          value={outputFormat}
+          onChange={(e) => setOutputFormat(e.target.value)}
+          style={{ width: '10%', height: '40px', fontSize: '16px' }}
+        >
+          <option value="pdf">PDF</option>
+          <option value="docx">Word</option>
+          <option value="txt">Text</option>
+          <option value="png">PNG</option>
+          <option value="jpeg">JPEG</option>
+          <option value="svg">SVG</option>
+          <option value="mp3">MP3</option>
+          <option value="mp4">MP4</option>
+          <option value="jpg">JPG</option>
+          {/* Add more options for supported formats */}
+        </select>
+      </YStack>
+      <YStack ai="center" space="$3">
+        <Button width="$10" disabled={!selectedFile} onPress={handleConvert}>
+          Convert
+        </Button>
+      </YStack>
+      {convertedFileUrl && (
+        <YStack ai="center" space="$2">
+          <Button onPress={handleDownload}>Download Converted File</Button>
+        </YStack>
+      )}
     </YStack>
+    // </ImageBackground>
   )
 }
