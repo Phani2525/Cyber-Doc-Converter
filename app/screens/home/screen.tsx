@@ -54,9 +54,11 @@ export const HomeScreen = () => {
     <YStack space="$4">
       <YStack marginTop="$8" ai="center" space="$2">
         <Text fontStyle="italic" fontWeight="700" fontSize="$10">
-          Welcome To Document Converter
-        </Text>
+          Welcome To Cyber-Doc-Converter
+        </Text>{' '}
+        <Text fontStyle="italic">Convert Your Document to Any Format You Want..!!</Text>
       </YStack>
+
       <YStack marginTop="$10" ai="center" space="$4">
         <Text>Click here to upload</Text>
         <FileUploader onFileUpload={handleFileUpload} />
