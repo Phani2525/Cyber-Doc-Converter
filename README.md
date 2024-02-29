@@ -2,7 +2,7 @@
 
 A Document Converter Application
 
-![Project Logo](./assets/skeleton.png)
+![Project Logo](./assets/cyberdoc.png)
 
 ```sh
 Yarn run web
